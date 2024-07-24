@@ -1,6 +1,6 @@
 //   typing  Animation 
 var typed  = new Typed(".typing",{
-    strings:["FullStack  Developer","Web Developer","Backend Developer","Technical content Writer"],
+    strings:["FullStack  Developer","Web Developer","Backend Developer"],
     typeSpeed:50,
     backSpeed: 50,
     startDelay:1000,
@@ -18,6 +18,30 @@ var typed  = new Typed(".typing",{
         this.classList.add('active');
     });
 });
+
+
+//  For Toggle button
+
+// JavaScript for mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.toggle-btn');
+    const navMenu = document.querySelector('.nav-menu');
+
+    toggleButton.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
+        toggleButton.classList.toggle('open');
+    });
+
+    // Close the menu when a menu item is clicked (optional)
+    navMenu.querySelectorAll('a').forEach(function(item) {
+        item.addEventListener('click', function() {
+            navMenu.classList.remove('open');
+            toggleButton.classList.remove('open');
+        });
+    });
+});
+console.log('JavaScript code executed');
+
 
  
 
